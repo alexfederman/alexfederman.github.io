@@ -4,6 +4,8 @@ let yStep = 60;
 let finishX = 560;
 function setup() {
   createCanvas(600, startY + yStep * racerXs.length);
+  drawRacer(70, 80);
+  drawRacer(100, 100);
 }
 function draw() {
   background(240);
@@ -15,8 +17,8 @@ function draw() {
     }
     circle(racerXs[i], y, 24);
   }
-  if (keyPressed(event)(LEFT_ARROW)) { racerXs.push(100) }
-  if (keyPressed(event)(UP_ARROW)) {
+  if (keyIsPressed(LEFT_ARROW)) { racerXs.push(100) }
+  if (keyIsPressed(UP_ARROW)) {
     racerXs.pop()
   }
 }
